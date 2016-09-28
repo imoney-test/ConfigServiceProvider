@@ -1,4 +1,5 @@
 # ConfigServiceProvider
+[![Build Status](https://travis-ci.org/imoney-test/ConfigServiceProvider.svg?branch=master)](https://travis-ci.org/imoney-test/ConfigServiceProvider)
 
 A config ServiceProvider for [Silex](http://silex.sensiolabs.org) with support
 for php, json, yaml, and toml.
