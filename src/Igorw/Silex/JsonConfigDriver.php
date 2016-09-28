@@ -6,9 +6,11 @@ class JsonConfigDriver implements ConfigDriver
 {
     public function load($filename)
     {
-        $config = $this->parseJson($filename);
+        $json = file_get_contents($filename);
+		
+		$config = $this->parseJson($filename);
 
-        if (! is_null($config) && JSON_ERROR_NONE !== json_last_error()) {
+        if (! is_null($json) && JSON_ERROR_NONE !== json_last_error()) {
             $jsonError = $this->getJsonError(json_last_error());
             throw new \RuntimeException(
                 sprintf('Invalid JSON provided "%s" in "%s"', $jsonError, $filename));
@@ -22,9 +24,8 @@ class JsonConfigDriver implements ConfigDriver
         return (bool) preg_match('#\.json(\.dist)?$#', $filename);
     }
 
-    private function parseJson($filename)
+    private function parseJson($json)
     {
-        $json = file_get_contents($filename);
         return json_decode($json, true);
     }
 
