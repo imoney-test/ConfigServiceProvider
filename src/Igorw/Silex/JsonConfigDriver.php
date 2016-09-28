@@ -8,7 +8,7 @@ class JsonConfigDriver implements ConfigDriver
     {
         $json = file_get_contents($filename);
 		
-		$config = $this->parseJson($filename);
+		$config = $this->parseJson($json);
 
         if (! is_null($json) && JSON_ERROR_NONE !== json_last_error()) {
             $jsonError = $this->getJsonError(json_last_error());
