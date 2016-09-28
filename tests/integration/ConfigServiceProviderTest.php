@@ -218,7 +218,7 @@ class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
         return array(
             array(__DIR__."/Fixtures/config.php"),
             array(__DIR__."/Fixtures/config.json"),
-            //array(__DIR__."/Fixtures/config.yml"),
+            array(__DIR__."/Fixtures/config.yml"),
             array(__DIR__."/Fixtures/config.toml"),
         );
     }
@@ -228,7 +228,7 @@ class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
         return array(
             array(__DIR__."/Fixtures/config_replacement.php"),
             array(__DIR__."/Fixtures/config_replacement.json"),
-            //array(__DIR__."/Fixtures/config_replacement.yml"),
+            array(__DIR__."/Fixtures/config_replacement.yml"),
             array(__DIR__."/Fixtures/config_replacement.toml"),
         );
     }
@@ -238,7 +238,7 @@ class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
         return array(
             array(__DIR__."/Fixtures/config_empty.php"),
             array(__DIR__."/Fixtures/config_empty.json"),
-            //array(__DIR__."/Fixtures/config_empty.yml"),
+            array(__DIR__."/Fixtures/config_empty.yml"),
             array(__DIR__."/Fixtures/config_empty.toml"),
         );
     }
@@ -248,7 +248,7 @@ class ConfigServiceProviderTest extends \PHPUnit_Framework_TestCase
         return array(
             array(__DIR__."/Fixtures/config_base.php", __DIR__."/Fixtures/config_extend.php"),
             array(__DIR__."/Fixtures/config_base.json", __DIR__."/Fixtures/config_extend.json"),
-            //array(__DIR__."/Fixtures/config_base.yml", __DIR__."/Fixtures/config_extend.yml"),
+            array(__DIR__."/Fixtures/config_base.yml", __DIR__."/Fixtures/config_extend.yml"),
         );
     }
 }
