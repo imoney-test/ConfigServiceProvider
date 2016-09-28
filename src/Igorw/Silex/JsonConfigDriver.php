@@ -10,7 +10,7 @@ class JsonConfigDriver implements ConfigDriver
 		
 		$config = $this->parseJson($json);
 
-        if (! is_null($json) && JSON_ERROR_NONE !== json_last_error()) {
+        if (! is_empty($json) && JSON_ERROR_NONE !== json_last_error()) {
             $jsonError = $this->getJsonError(json_last_error());
             throw new \RuntimeException(
                 sprintf('Invalid JSON provided "%s" in "%s"', $jsonError, $filename));
